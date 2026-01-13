@@ -9,13 +9,13 @@ const connection= mysql2.createPool({
   database: process.env.DB_DATABASE
 
 })
-
+ 
 connection.getConnection((err,conn)=>{
   if(err){
     console.log("init connection error ",err.message);
     return;
   }
-  console.log("✅Database-ka si sax ah ayaa loogu xirmay!");
+  console.log("Database- successfluy connected!");
   
   
   connection.releaseConnection(conn);
